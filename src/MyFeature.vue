@@ -10,6 +10,12 @@ defineProps<{
 </script>
 
 <template>
-<n-h3 style="display: flex; align-items: center;justify-content: center"><n-icon :component="icon" size="32" style="margin-right: 8px" />{{ title }}</n-h3>
-{{ description }}
+  <n-h3 style="display: flex; align-items: center;justify-content: center">
+    <n-icon
+      :component="icon"
+      size="32"
+      style="margin-right: 8px"
+    />{{ title }}
+  </n-h3>
+  {{ description }}
 </template>

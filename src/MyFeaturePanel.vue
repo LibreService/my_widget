@@ -13,12 +13,22 @@ defineProps<{
 </script>
 
 <template>
-<n-card>
-  <div style="text-align: center"><n-h2>Features</n-h2></div>
-  <n-grid :x-gap="16" :y-gap="24" cols="1 400:2 600:3">
-    <n-gi v-for="{ icon, title, description } of features">
-      <my-feature :icon="icon" :title="title" :description="description"></my-feature>
-    </n-gi>
-  </n-grid>
-</n-card>
+  <n-card>
+    <div style="text-align: center">
+      <n-h2>Features</n-h2>
+    </div>
+    <n-grid
+      :x-gap="16"
+      :y-gap="24"
+      cols="1 400:2 600:3"
+    >
+      <n-gi v-for="{ icon, title, description } of features">
+        <my-feature
+          :icon="icon"
+          :title="title"
+          :description="description"
+        />
+      </n-gi>
+    </n-grid>
+  </n-card>
 </template>
