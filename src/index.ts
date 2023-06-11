@@ -1,3 +1,4 @@
+export { default as MyBulkConverter } from './MyBulkConverter.vue'
 export { default as MyFeaturePanel } from './MyFeaturePanel.vue'
 export { default as MyFooter } from './MyFooter.vue'
 export { default as MyHeader } from './MyHeader.vue'

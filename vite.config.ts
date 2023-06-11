@@ -10,7 +10,13 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue', 'naive-ui', '@vicons/fa']
+      external: [
+        'vue',
+        'naive-ui',
+        '@vicons/fa',
+        '@vicons/material',
+        'client-zip'
+      ]
     }
   },
   plugins: [vue()]
