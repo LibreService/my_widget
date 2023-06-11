@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { Component } from 'vue'
+import { Component, VNode, defineComponent } from 'vue'
 import { NIcon, NH3 } from 'naive-ui'
 
 defineProps<{
   icon: Component,
   title: string,
-  description: string
+  content?: () => VNode
+  description?: string
 }>()
 </script>
 
@@ -17,5 +18,11 @@ defineProps<{
       style="margin-right: 8px"
     />{{ title }}
   </n-h3>
-  {{ description }}
+  <component
+    :is="defineComponent(() => content!)"
+    v-if="content"
+  />
+  <template v-else>
+    {{ description }}
+  </template>
 </template>
